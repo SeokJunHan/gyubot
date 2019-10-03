@@ -138,7 +138,7 @@ async def on_message(message) :
 
     if (message.content == "!헛소리" or message.content == "!어록"):
         # f = open("C:\\Users\\HanSeokJun\\Desktop\\gyubot\\venv\\uhrok.txt", 'r')
-        f = open(os.getcwd()+"uhrok.txt", 'r')
+        f = open(os.getcwd()+"\\uhrok.txt", 'r')
         list = []
         while True:
             line = f.readline()
@@ -156,7 +156,7 @@ async def on_message(message) :
             return
         uhrok = " ".join(add_uhrok[1:])
         # f = open("C:\\Users\\HanSeokJun\\Desktop\\gyubot\\venv\\uhrok.txt", 'a')
-        f = open(os.getcwd()+"uhrok.txt", 'a')
+        f = open(os.getcwd()+"\\uhrok.txt", 'a')
         f.write(uhrok + "\n")
         f.close()
         await message.channel.send("어록에 [" + uhrok + "]이(가) 추가되었습니다.")
