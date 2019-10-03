@@ -232,7 +232,8 @@ async def on_message(message) :
         game = discord.Game(current_game)
         await discord.Client.change_presence(app, status=discord.Status.online, activity=game)
 
-app.run(token)
+access_token = os.environ["BOT_TOKEN"]
+app.run(access_token)
 
 
 
